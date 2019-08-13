@@ -1,5 +1,7 @@
 package com.leetcode.demo.stack;
 
+import java.util.Stack;
+
 /**
  * 给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效。
  *
@@ -36,9 +38,54 @@ package com.leetcode.demo.stack;
  */
 public class ValidBracket {
 
-    public boolean isValid(String s) {
+    public static boolean isValid(String s) {
+        String[] ss = s.split("");
+        Stack stack = new Stack();
+        for (int i=0; i<ss.length; i++) {
+            switch (ss[i]) {
+                case "(":
+                case "{":
+                case "[":
+                    stack.push(ss[i]);
+                    break;
+                case ")":
+                case "}":
+                case "]": {
+                    if (stack.empty()) {
+                        return false;
+                    }
+                    if ((stack.peek().equals("(") && ss[i].equals(")"))
+                        || (stack.peek().equals("[") && ss[i].equals("]"))
+                        || (stack.peek().equals("{") && ss[i].equals("}"))) {
+                        stack.pop();
+                        break;
+                    } else {
+                        return false;
+                    }
+                }
+                default:
+                    break;
+            }
+        }
+        if (!stack.empty()) {
+            return false;
+        }
 
-        //TODO
         return true;
+    }
+
+    public static void main(String[] args) {
+        String s1 = "";
+        String s2 = "((()))";
+        String s3 = "))((";
+        String s4 = "{[]}";
+        String s5 = "(((";
+
+        boolean b1 = isValid(s1);
+        boolean b2 = isValid(s2);
+        boolean b3 = isValid(s3);
+        boolean b4 = isValid(s4);
+        boolean b5 = isValid(s5);
+        System.out.println();
     }
 }
