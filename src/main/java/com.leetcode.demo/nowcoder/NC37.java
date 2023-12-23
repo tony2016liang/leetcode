@@ -16,6 +16,13 @@ public class NC37 {
      */
     public ArrayList<Interval> merge (ArrayList<Interval> intervals) {
         // write code here
+        intervals.sort(new Comparator<Interval>() {
+            @Override
+            public int compare(Interval o1, Interval o2) {
+                return o2.start - o1.start;
+            }
+        });
+        // fixme 合并
         return null;
     }
 
