@@ -1,6 +1,7 @@
 package com.leetcode.demo.linkedList;
 
-import com.leetcode.demo.linkedList.ListNode;
+
+import com.leetcode.demo.ListNode;
 
 /**
  * 反转一个单链表。

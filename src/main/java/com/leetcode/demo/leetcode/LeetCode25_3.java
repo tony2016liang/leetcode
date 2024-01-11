@@ -1,5 +1,7 @@
 package com.leetcode.demo.leetcode;
 
+import com.leetcode.demo.ListNode;
+
 import java.util.List;
 import java.util.PriorityQueue;
 
@@ -47,19 +49,4 @@ public class LeetCode25_3 {
         return res.next;
     }
 
-
-
-
-    static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {}
-
-        ListNode(int val) {
-            val = val;
-        }
-
-        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-    }
 }

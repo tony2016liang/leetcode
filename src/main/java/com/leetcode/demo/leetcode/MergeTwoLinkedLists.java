@@ -1,5 +1,7 @@
 package com.leetcode.demo.leetcode;
 
+import com.leetcode.demo.ListNode;
+
 /**
  * 合并两个有序链表
  * （这是很多链表合并类算法的基础）
@@ -37,16 +39,4 @@ public class MergeTwoLinkedLists {
         return head.next;
     }
 
-    static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {}
-
-        ListNode(int val) {
-            val = val;
-        }
-
-        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-    }
 }

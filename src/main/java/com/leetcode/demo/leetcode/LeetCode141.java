@@ -1,5 +1,7 @@
 package com.leetcode.demo.leetcode;
 
+import com.leetcode.demo.ListNode;
+
 /**
  * 环形链表
  * https://leetcode.cn/problems/linked-list-cycle/description/
@@ -17,13 +19,4 @@ public class LeetCode141 {
         return false;
     }
 
-    static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-    }
 }

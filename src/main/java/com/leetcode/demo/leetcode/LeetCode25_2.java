@@ -1,5 +1,7 @@
 package com.leetcode.demo.leetcode;
 
+import com.leetcode.demo.ListNode;
+
 import javax.swing.tree.TreeNode;
 
 /**
@@ -55,16 +57,4 @@ public class LeetCode25_2 {
         return head.next;
     }
 
-    static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {}
-
-        ListNode(int val) {
-            val = val;
-        }
-
-        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-    }
 }

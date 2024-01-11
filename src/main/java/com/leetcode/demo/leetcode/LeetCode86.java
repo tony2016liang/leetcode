@@ -1,5 +1,7 @@
 package com.leetcode.demo.leetcode;
 
+import com.leetcode.demo.ListNode;
+
 /**
  * 分隔链表
  * https://leetcode.cn/problems/partition-list/description/
@@ -46,27 +48,4 @@ public class LeetCode86 {
         System.out.println();
     }
 
-    static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {}
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-
-        public static ListNode create(int[] nums) {
-            if (nums.length < 1) return null;
-            ListNode head = new ListNode(nums[0]);
-            ListNode tail = head;
-            for (int i = 1; i < nums.length; i++) {
-                tail.next = new ListNode(nums[i]);
-                tail = tail.next;
-            }
-            return head;
-        }
-    }
 }

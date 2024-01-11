@@ -1,6 +1,7 @@
 package com.leetcode.demo.linkedList;
 
-import com.leetcode.demo.linkedList.ListNode;
+
+import com.leetcode.demo.ListNode;
 
 /**
  * 给定一个链表，删除链表的倒数第 n 个节点，并且返回链表的头结点。

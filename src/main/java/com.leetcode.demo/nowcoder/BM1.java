@@ -1,5 +1,7 @@
 package com.leetcode.demo.nowcoder;
 
+import com.leetcode.demo.ListNode;
+
 import java.util.*;
 
 /**
@@ -87,12 +89,4 @@ public class BM1 {
         System.out.println();
     }
 
-    public static class ListNode {
-        int val;
-        ListNode next = null;
-
-        public ListNode(int val) {
-            this.val = val;
-        }
-    }
 }

@@ -1,6 +1,7 @@
 package com.leetcode.demo.linkedList;
 
-import com.leetcode.demo.linkedList.ListNode;
+
+import com.leetcode.demo.ListNode;
 
 /**
  * 给定一个带有头结点 head 的非空单链表，返回链表的中间结点。

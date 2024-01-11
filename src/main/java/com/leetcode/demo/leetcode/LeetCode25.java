@@ -1,5 +1,7 @@
 package com.leetcode.demo.leetcode;
 
+import com.leetcode.demo.ListNode;
+
 /**
  * 合并k个升序链表
  * https://leetcode.cn/problems/merge-k-sorted-lists/description/
@@ -66,16 +68,4 @@ public class LeetCode25 {
         return true;
     }
 
-    static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {}
-
-        ListNode(int val) {
-            val = val;
-        }
-
-        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-    }
 }
