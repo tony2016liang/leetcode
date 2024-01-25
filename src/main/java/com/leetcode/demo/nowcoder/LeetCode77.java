@@ -6,33 +6,26 @@ import java.util.*;
  * 组合
  * https://leetcode.cn/problems/combinations/
  *
- * FIXME leetcode未通过
  */
 public class LeetCode77 {
 
     List<List<Integer>> res = new ArrayList<>();
-    List<Integer> temp = new ArrayList<>();
-    boolean[] used;
+    LinkedList<Integer> t = new LinkedList<>();
     public List<List<Integer>> combine(int n, int k) {
-        used = new boolean[n+1];
         backtrack(n, 0, k);
         return res;
     }
 
     private void backtrack(int n, int index, int k) {
-        if (index == k) {
-            res.add(new ArrayList<>(temp));
-            return;
+        if (t.size() == k) {
+            res.add(new ArrayList<>(t));
         }
-        for (int i=1; i<=n; i++) {
-            if (used[i]) continue;
-            temp.add(i);
-            used[i] = true;
-            System.out.println(" 递归前：" + temp);
-            backtrack(n, index+1, k);
-            temp.remove(index);
-            used[i] = false;
-            System.out.println("递归后：" + temp);
+        for (int i = index; i < n; i++) {
+            t.addLast(i + 1);
+            System.out.println("递归前：" + t);
+            backtrack(n, i + 1, k);
+            t.removeLast();
+            System.out.println("递归后：" + t);
         }
     }
 
