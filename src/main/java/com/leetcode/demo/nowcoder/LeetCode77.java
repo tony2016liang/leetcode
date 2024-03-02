@@ -17,7 +17,9 @@ public class LeetCode77 {
     }
 
     private void backtrack(int n, int index, int k) {
+        System.out.println("是否有判断：" + t);
         if (t.size() == k) {
+            System.out.println("符合添加要求：" + t);
             res.add(new ArrayList<>(t));
         }
         for (int i = index; i < n; i++) {
