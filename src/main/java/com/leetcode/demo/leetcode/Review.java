@@ -7,32 +7,26 @@ import java.util.List;
 
 public class Review {
 
-    List<List<Integer>> res = new ArrayList<>();
-    LinkedList<Integer> track = new LinkedList<>();
-
-    public List<List<Integer>> subsetsWithDup(int[] nums) {
-        Arrays.sort(nums);
-        backtrack(nums, 0);
-        return res;
-    }
-
-    private void backtrack(int[] nums, int index) {
-        res.add(new ArrayList<>(track));
-        for (int i = index; i < nums.length; i++) {
-            if (i > index && nums[i] == nums[i-1]) {
-                continue;
-            }
-            track.addLast(nums[i]);
-            backtrack(nums, i+1);
-            track.removeLast();
+    public int lengthOfLongestSubstring(String s) {
+        if (null == s || "" == s) {
+            return 0;
         }
+        List<Character> window = new ArrayList<>();
+        int left = 0, right = 0, len = 0;
+        while (left <= right && right < s.length()) {
+            window.add(s.charAt(right));
+            right++;
+            len++;
+        }
+
+        return 0;
     }
+
+
 
     public static void main(String[] args) {
         Review review = new Review();
-        int[] nums = {1,2,2};
-        review.subsetsWithDup(nums);
-        System.out.println();
+
     }
 }
 
