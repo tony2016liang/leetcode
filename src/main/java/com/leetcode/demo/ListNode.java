@@ -23,6 +23,16 @@ public class ListNode {
         return head;
     }
 
+    public static ListNode[] createNodes(int[][] numss) {
+        ListNode[] nodes = new ListNode[numss.length];
+        int i = 0;
+        for (int[] nums : numss) {
+            if (nums.length < 1) continue;
+            nodes[i++] = create(nums);
+        }
+        return nodes;
+    }
+
     /**
      * 构建带一个环的单链表
      *
